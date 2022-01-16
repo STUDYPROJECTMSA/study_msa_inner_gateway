@@ -4,8 +4,8 @@ resilience4j:
   circuitbreaker:
     configs:
       default:
-        minimunNumberOfCalls: 5 #???? ???
-        failureRateThreshold: 50 #????
+        minimunNumberOfCalls: 5
+        failureRateThreshold: 50
         waitDurationInopenState: 10s
   retry:
     configs:
@@ -42,6 +42,11 @@ eureka:
 spring:
   application:
     name: inner-gateway-service
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: study
+    password: study12
   cloud:
     gateway:
       routes:
